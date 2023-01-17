@@ -2,9 +2,11 @@
   "name": "skipp-json-server",
   "version": "1.0.0",
   "description": "JSON Server for SkippDev test",
-  "main": "db.json",
+  "main": "server.js",
+  "license": "MIT",
   "scripts": {
-    "start": "json-server --watch db.json"
+    "dev": "NODE_ENV=development node server.js",
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "json-server": "^8.11.0"
