@@ -1,0 +1,12 @@
+{
+  "name": "skipp-json-server",
+  "version": "1.0.0",
+  "description": "JSON Server for SkippDev test",
+  "main": "db.json",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "json-server": "^8.11.0"
+  }
+}
