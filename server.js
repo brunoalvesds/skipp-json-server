@@ -10,29 +10,28 @@ const headers = {
     'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
   };
   
-     if (event.httpMethod === 'POST' || event.httpMethod === 'DELETE' || event.httpMethod === 'PATCH') {
+    if (event.httpMethod === 'POST' || event.httpMethod === 'DELETE' || event.httpMethod === 'PATCH') {
         // To enable CORS
         return {
-         statusCode: 200, 
-         headers,
-         body: 'success'
-       };
+            statusCode: 200, 
+            headers,
+            body: 'success'
+        };
    }
 
-server.use(middlewares)
-// Add this before server.use(router)
-server.use(jsonServer.rewriter({
-    '/*': '/$1',
-    '/blog/:resource/:id/show': '/:resource/:id'
-}))
-server.use(router)
-server.listen(3000, () => {
-    console.log('JSON Server is running')
-})
+    server.use(middlewares)
+    // Add this before server.use(router)
+    server.use(jsonServer.rewriter({
+        '/*': '/$1',
+    }))
+    server.use(router)
+    server.listen(3000, () => {
+        console.log('JSON Server is running')
+    })
 
 
-const filePath = path.join("/tmp", "db.json");
- fs.writeFileSync(filePath, JSON.stringify(data));
+    const filePath = path.join("/tmp", "db.json");
+    fs.writeFileSync(filePath, JSON.stringify(data));
 
 // Export the Server API
 module.exports = server
