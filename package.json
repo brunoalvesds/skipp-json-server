@@ -1,14 +1,12 @@
 {
-  "name": "skipp-json-server",
+  "name": "json-server-vercel",
   "version": "1.0.0",
-  "description": "JSON Server for SkippDev test",
+  "description": "Deploy JSON Server to Vercel",
   "main": "server.js",
-  "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development node server.js",
-    "start": "NODE_ENV=production node server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "json-server": "^8.11.0"
+    "json-server": "^0.17.0"
   }
 }
