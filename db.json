@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "John",
-      "email": "j@j.com",
+      "email": "jaya@j.com",
       "phone": "21313",
       "userId": 1
     },
@@ -55,13 +55,6 @@
         "id": "1"
       },
       "id": 10
-    },
-    {
-      "name": "Teste",
-      "email": "teste@teste.com",
-      "phone": "teste",
-      "userId": "1",
-      "id": 11
     }
   ]
 }
