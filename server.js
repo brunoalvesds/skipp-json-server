@@ -15,5 +15,8 @@ server.listen(3000, () => {
     console.log('JSON Server is running')
 })
 
+const filePath = path.join("/tmp", "db.json");
+ fs.writeFileSync(filePath, JSON.stringify(data));
+
 // Export the Server API
 module.exports = server
