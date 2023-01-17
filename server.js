@@ -15,9 +15,6 @@ server.listen(3000, () => {
     console.log('JSON Server is running')
 })
 
-// set default middlewares (logger, static, cors and no-cache)
-server.use(middlewares);
-
 
 const filePath = path.join("/tmp", "db.json");
  fs.writeFileSync(filePath, JSON.stringify(data));
