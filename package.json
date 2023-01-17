@@ -9,6 +9,6 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "json-server": "^7.0.0"
+    "json-server": "^8.11.0"
   }
 }
