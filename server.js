@@ -2,7 +2,7 @@
 const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults()
+const middlewares = jsonServer.defaults({ noCors: true })
 
 server.use(middlewares)
 // Add this before server.use(router)
@@ -14,6 +14,10 @@ server.use(router)
 server.listen(3000, () => {
     console.log('JSON Server is running')
 })
+
+// set default middlewares (logger, static, cors and no-cache)
+server.use(middlewares);
+
 
 const filePath = path.join("/tmp", "db.json");
  fs.writeFileSync(filePath, JSON.stringify(data));
